@@ -1,10 +1,9 @@
 class Snake extends GameObject{
-
+private ColliderCircular collider;
   
-  public Snake(){
-  }
   public Snake(PVector posicion){
   this.posicion=posicion;
+  this.collider = new ColliderCircular(new PVector(mouseX,mouseY),20);
 }
   public void display(){
     noStroke();
@@ -13,5 +12,13 @@ class Snake extends GameObject{
     rect(this.posicion.x+10,this.posicion.y-20,30,20);
   }
   public void comer(Animal a){
+    boolean isCollider= iscollider.validarColision(animal.getCollider());
+    if(isCollider){
+      println("animal comido");
+    }else{
+    println("no ha comido");}
+    
   }
+  public ColliderCircular getCollider(){
+  return collider;}
 }
