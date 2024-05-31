@@ -1,4 +1,4 @@
-abstract class GameObject{
+/*abstract class GameObject{
 protected PVector posicion;
 
 abstract void display();
@@ -9,4 +9,4 @@ return posicion;
 public  void setPosicion(PVector posicion){
 this.posicion=posicion;
 }
-}
+}*/

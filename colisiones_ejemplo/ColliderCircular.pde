@@ -6,28 +6,24 @@ public ColliderCircular(PVector posCentro, float radio){
 this.posCentro=posCentro;
 this.radio=radio;
 }
-public void validarColicion(ColliderCircular otroCollider){
-  boolean isCollider=false;
+public boolean validarColicion(ColliderCircular otroCollider){
+  boolean isCollide=false;
   
   float distancia = this.posCentro.dist(otroCollider.getPosCentro());
     println(distancia);
     if(distancia <(this.radio + otroCollider.getRadio())){
-      isCollider = true;
+      isCollide = true;
     }
-    
+    return isCollide;
 }
+public PVector getPosCentro(){
+return this.posCentro;}
 
 
-public setPosCentro(PVector posCentro){
+public void setPosCentro(PVector posCentro){
 this.posCentro=posCentro;}
 
-public PVector getPosCentro(){
-return posCentro;}
 
 public float getRadio(){
-return posCentro;}
-
-public setRadio(float radio){
-this.radio=radio;}
-}
+return this.radio;}
 }

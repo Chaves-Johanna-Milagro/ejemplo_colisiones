@@ -6,7 +6,7 @@ public Animal(){
 }
 public Animal(PVector posicion){
 this.posicion=posicion;
-this.collider = new ColliderCircular(new PVector(200,200),20.0);
+this.collider = new ColliderCircular(this.posicion,20.0);
 }
 
 public void display(){
@@ -15,11 +15,11 @@ public void display(){
 }
 
 
-
+public ColliderCircular getCollider(){
+return this.collider;}
 
 public PVector getPosicion(){
-return posicion;
-}
+return posicion;}
 public  void setPosicion(PVector posicion){
 this.posicion=posicion;
 }
